@@ -1,0 +1,6 @@
+<h4 mat-dialog-title>ALERT</h4>
+ <div mat-dialog-content> <p> You are about to delete<strong>{{ item }}</strong>. <b>Are you sure?</b> </p> </div> 
+ <div mat-dialog-actions> 
+  <button mat-button style="margin-right: 110px; background-color: #147D64; color: #fff; padding: 5px 15px; border: none; border-radius: 3px; cursor: pointer;" [mat-dialog-close]="true">Delete</button> 
+  <button mat-button style="margin-left: 70px; background-color: #fff; color: black; padding: 5px 15px; border: none; border-radius: 3px; cursor: pointer;"[mat-dialog-close]="false">Cancel</button>
+ </div>

@@ -1,0 +1,80 @@
+.spacer {
+  margin-right: 10px;
+}
+
+.red-text{
+  color: #E50012 !important;
+  font-weight: 500;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.spacer {
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr 1fr;
+  grid-gap: 4px;
+  
+}
+
+.percentage {
+  background-color: #C6F7E2;
+  padding: 0px;
+  border-radius: 1%;
+  font-weight: 500;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  grid-gap: 2px;
+  padding: 1px 4px;
+}
+
+.percentage > img {
+  height: 20px;
+}
+
+.green-text {
+  color: green;
+  font-weight: 600;
+} 
+
+.percentage > p {
+  margin: 0;
+}
+
+button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+button[disabled] {
+  cursor: not-allowed;
+}
+
+button[disabled] > svg {
+  fill: #ebefee;
+}
+
+div * {
+  color: #595959;
+  font-weight: 400;
+}
+
+img{
+      mix-blend-mode: color-burn;
+}
+
+.mat-mdc-table  {
+  width: 80%;
+  border: 1px solid black !important;
+}
+.tablecomp{
+  width: 100%;
+}
+
+

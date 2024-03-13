@@ -1,0 +1,29 @@
+<h3 mat-dialog-title>Issues/Risks/Hazards</h3>
+<div mat-dialog-content>
+  <!-- <mat-form-field>
+        <mat-label>Select Category</mat-label>  -->
+  <mat-form-field>
+    <mat-label>Select Category:</mat-label>
+    <mat-select [(value)]="selectedCategory" (selectionChange)="onCategoryChange($event)">
+      <!-- <mat-option value="">Select Category</mat-option> -->
+      <mat-option value="Issues">Issues</mat-option>
+      <mat-option value="Risks">Risks</mat-option>
+      <mat-option value="Hazards">Hazards</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field *ngIf="selectedCategory">
+    <mat-label>Select Type</mat-label>
+    <mat-select [disabled]="!selectedCategory">
+      <!-- <mat-option value="">Select {{ selectedCategory }}</mat-option> -->
+      <mat-option *ngFor="let option of selectedSubCategory" [value]="option" (click)="selectedItem = option">{{ option
+        }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- </mat-form-field>  -->
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancelClick()" style="margin-right: 110px;">Cancel</button>
+  <button mat-button [mat-dialog-close]="selectedItem" [disabled]="!selectedItem" style="margin-left: 30px;" class="my-button">Add</button>
+</div>
